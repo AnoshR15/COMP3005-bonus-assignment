@@ -1,0 +1,8 @@
+// Two string columns, and the letter B appears as a value: select[A=B] compares the columns,
+// select[A='B'] compares column A with the string B.
+R (A, B) = {
+  x, x
+  x, y
+  B, B
+  B, q
+}

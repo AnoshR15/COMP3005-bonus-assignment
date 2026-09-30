@@ -1,0 +1,4 @@
+// a string that is never closed
+R (a) = {
+  'x
+}

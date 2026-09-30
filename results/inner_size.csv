@@ -1,0 +1,3 @@
+n,m,comparisons,wall_time_s,output_tuples,us_per_comparison
+16000,64000,1024000000,353.4749,1600,0.345
+64000,16000,1024000000,184.9141,6400,0.181

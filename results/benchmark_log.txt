@@ -1,0 +1,25 @@
+unary  n=  1000: select examined   1000 tuples in 0.000245 s (1000 out); project 0.000858 s (1000 out)
+unary  n=  2000: select examined   2000 tuples in 0.000508 s (1000 out); project 0.002305 s (2000 out)
+unary  n=  4000: select examined   4000 tuples in 0.000931 s (1000 out); project 0.003714 s (4000 out)
+unary  n=  8000: select examined   8000 tuples in 0.002097 s (1000 out); project 0.008774 s (8000 out)
+unary  n= 16000: select examined  16000 tuples in 0.004102 s (1000 out); project 0.017971 s (16000 out)
+unary  n= 32000: select examined  32000 tuples in 0.008954 s (1000 out); project 0.039931 s (32000 out)
+unary  n= 64000: select examined  64000 tuples in 0.017916 s (1000 out); project 0.093768 s (64000 out)
+match  n=m=8000 rate=0.0: 64000000 comparisons 17.281 s 0 output tuples
+match  n=m=8000 rate=0.1: 64000000 comparisons 17.758 s 800 output tuples
+match  n=m=8000 rate=0.5: 64000000 comparisons 15.620 s 4000 output tuples
+match  n=m=8000 rate=1.0: 64000000 comparisons 15.731 s 8000 output tuples
+join   n=m=  1000:      1000000 comparisons      0.249 s    100 output tuples
+join   n=m=  2000:      4000000 comparisons      1.048 s    200 output tuples
+join   n=m=  4000:     16000000 comparisons      3.310 s    400 output tuples
+join   n=m=  8000:     64000000 comparisons     12.232 s    800 output tuples
+join   n=m= 16000:    256000000 comparisons     49.408 s   1600 output tuples
+join   n=m= 32000:   1024000000 comparisons    201.641 s   3200 output tuples
+join   n=m= 64000:   4096000000 comparisons   1336.687 s   6400 output tuples
+exit 0
+match  n=m=8000 rate=0.0: 64000000 comparisons 12.660 s 0 output tuples
+match  n=m=8000 rate=0.1: 64000000 comparisons 12.223 s 800 output tuples
+match  n=m=8000 rate=0.5: 64000000 comparisons 12.503 s 4000 output tuples
+match  n=m=8000 rate=1.0: 64000000 comparisons 13.025 s 8000 output tuples
+inner-size probe R(n)=16000 join S(m)=64000: 1024000000 comparisons 353.475 s 1600 out, 0.345 us/comparison
+inner-size probe R(n)=64000 join S(m)=16000: 1024000000 comparisons 184.914 s 6400 out, 0.181 us/comparison

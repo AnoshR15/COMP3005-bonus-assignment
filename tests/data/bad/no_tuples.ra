@@ -1,0 +1,3 @@
+// no tuples, so the attribute type cannot be taken from the data
+R (a) = {
+}
