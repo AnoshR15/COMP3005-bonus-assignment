@@ -1,0 +1,4 @@
+B,rows,page reads,hits,misses,evictions,writes,most pages pinned at once
+2,127500,502,1,502,500,0,2
+8,127500,502,1,502,494,0,2
+64,127500,502,1,502,438,0,2

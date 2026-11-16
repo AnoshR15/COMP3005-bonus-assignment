@@ -1,0 +1,4 @@
+// the same attribute listed twice
+R (a, a) = {
+  1, 2
+}

@@ -1,0 +1,21 @@
+R.db, page 1 (data page), bytes 0 to 31: header and slot directory
+    0  01 00 00 00 03 00 d2 0f  f3 0f 0d 00 00 00 00 00  ................
+   16  d2 0f 0d 00 00 00 00 00  00 00 00 00 00 00 00 00  ................
+
+R.db, page 1, bytes 4048 to 4095: record data
+ 4048  00 00 2b 00 00 00 03 00  61 6d 79 09 00 00 00 01  ..+.....amy.....
+ 4064  00 00 00 0a 00 61 62 63  64 65 66 67 68 69 6a 02  .....abcdefghij.
+ 4080  00 00 00 2a 00 00 00 03  00 62 6f 62 07 00 00 00  ...*.....bob....
+
+R.db, page 0 (directory page), bytes 0 to 15
+    0  00 00 00 00 ff ff ff ff  01 00 01 00 00 00 be 0f  ................
+
+catalog.db, page 0, bytes 0 to 123: header and entry text
+    0  00 00 00 00 01 00 70 00  ff ff ff ff 7b 22 6e 61  ......p.....{"na
+   16  6d 65 22 3a 22 52 22 2c  22 63 6f 6c 75 6d 6e 73  me":"R","columns
+   32  22 3a 5b 5b 22 61 22 2c  22 49 4e 54 22 2c 6e 75  ":[["a","INT",nu
+   48  6c 6c 5d 2c 5b 22 62 22  2c 22 56 41 52 43 48 41  ll],["b","VARCHA
+   64  52 22 2c 32 30 5d 2c 5b  22 63 22 2c 22 49 4e 54  R",20],["c","INT
+   80  22 2c 6e 75 6c 6c 5d 5d  2c 22 66 69 6c 65 22 3a  ",null]],"file":
+   96  22 52 2e 64 62 22 2c 22  70 61 67 65 73 22 3a 31  "R.db","pages":1
+  112  2c 22 74 75 70 6c 65 73  22 3a 32 7d 00 00 00 00  ,"tuples":2}....

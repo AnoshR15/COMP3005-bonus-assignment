@@ -1,0 +1,5 @@
+data,schema,"record length L, bytes (mean)",computed floor(4088 / (L + 4)),"measured, mean over full pages",fewest on a page,most on a page,"data pages for 20,000 rows"
+all INT,"a:INT, b:INT, c:INT",12,255,255,255,255,79
+"short VARCHAR, every value 3 bytes","a:INT, b:VARCHAR(20), c:INT",13,240,240,240,240,84
+"short VARCHAR, values of 2 to 9 bytes","a:INT, b:VARCHAR(20), c:INT",15.68,207,207.38,204,211,97
+"VARCHAR(200), every value 200 bytes","k:INT, pad:VARCHAR(200)",206,19,19,19,19,1053

@@ -1,0 +1,15 @@
+// Two bags with repeated tuples, for the duplicate tests.  P = [1, 1, 1, 2, 3]   Q = [1, 1, 2, 2, 4]
+P (v) = {
+  1
+  1
+  1
+  2
+  3
+}
+Q (v) = {
+  1
+  1
+  2
+  2
+  4
+}

@@ -1,0 +1,9 @@
+// Every kind of value that has to be quoted.
+Q (Name, N) = {
+  'O''Brien', 1
+  'a,b', 2
+  'Bob)', 3
+  '30', 4 // a quoted number is a string
+  'x//y', 5
+  '}', 6
+}

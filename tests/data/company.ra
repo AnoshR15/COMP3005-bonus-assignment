@@ -1,0 +1,10 @@
+// Employees with a manager column, and their departments. Used by the join and rename tests.
+Emp (EID, Name, Age, DID, MgrID) = {
+  E1, John, 32, D1, E3
+  E2, Alice, 28, D2, E1
+  E3, Bob, 29, D1, E3
+}
+Dept (DID, DName) = {
+  D1, Engineering
+  D2, HR
+}

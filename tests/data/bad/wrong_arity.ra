@@ -1,0 +1,4 @@
+// two attributes but one value
+R (a, b) = {
+  1
+}

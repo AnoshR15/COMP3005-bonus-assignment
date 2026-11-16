@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+data/generated/
+.pytest_cache/
+bench/m2db/
+db/
+bench/m1db/
+bench/m4db/
+samples/data/
+workload/answers/
+workload/postgres/
+wdb/

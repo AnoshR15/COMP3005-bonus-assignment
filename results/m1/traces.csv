@@ -1,0 +1,6 @@
+trace,what it is,requests,distinct pages
+trace 1,uniform random over 300 pages,5000,300
+trace 2,80 percent of requests to 60 hot pages of 300,5000,296
+trace 3,"80-page file scanned ten times, as specified",800,80
+trace 4,"working set of 30 pages, a 200-page scan every 300 requests",5000,230
+trace 5,"skewed: page i requested in proportion to 1/(i+1), 500 pages",5000,454

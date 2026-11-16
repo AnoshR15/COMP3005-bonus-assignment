@@ -1,0 +1,9 @@
+{
+  "tables": {
+    "Emp":  [["eid", "INT"], ["name", "VARCHAR(20)"], ["age", "INT"], ["salary", "INT"],
+             ["did", "INT"], ["mgr", "INT"], ["city", "VARCHAR(20)"]],
+    "Dept": [["did", "INT"], ["title", "VARCHAR(20)"], ["budget", "INT"], ["city", "VARCHAR(20)"]],
+    "Proj": [["pid", "INT"], ["did", "INT"], ["pname", "VARCHAR(30)"]],
+    "Works": [["eid", "INT"], ["pid", "INT"], ["hours", "INT"]]
+  }
+}

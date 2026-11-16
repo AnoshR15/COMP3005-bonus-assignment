@@ -1,0 +1,20 @@
+// Single-column relations for the set operators and the precedence tests.
+A (v) = {
+  1
+  2
+  3
+}
+B (v) = {
+  1
+}
+C (v) = {
+  2
+}
+D (v) = {
+  2
+  3
+}
+// Same attribute name as A but a string column, so A union Names is not union compatible.
+Names (v) = {
+  x
+}

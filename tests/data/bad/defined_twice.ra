@@ -1,0 +1,7 @@
+// the same relation defined twice
+R (a) = {
+  1
+}
+R (a) = {
+  2
+}
