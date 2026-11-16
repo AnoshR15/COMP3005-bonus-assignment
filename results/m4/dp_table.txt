@@ -1,0 +1,42 @@
+SELECT c.name, p.pname, i.note FROM Item i JOIN Orders o ON i.oid = o.oid JOIN Customer c ON o.cid = c.cid JOIN Product p ON i.pid = p.pid WHERE p.category < 3 AND c.segment < 3
+B = 8
+
+subset     best plan considered                                                            rows  pages  cost
+{i}        access i                                                                        3000     33    42
+{o}        access o                                                                        2000      6    40
+{c}        access c                                                                         171      1     7
+{p}        access p                                                                         120      1     5
+{i,o}      {i} outer, nested loop with o inner: 9 + 33 + 40 + 6 + 6 x 6                    3000     33   124
+{i,c}      no join predicate, skipped
+{o,c}      {o} outer, nested loop with c inner: 34 + 6 + 7 + 1 + 1 x 1                     1140      5    49
+{i,p}      {i} outer, nested loop with p inner: 9 + 33 + 5 + 1 + 6 x 1                     1837     24    54
+{o,p}      no join predicate, skipped
+{c,p}      no join predicate, skipped
+{i,o,c}    {o,c} outer, nested loop with i inner: 49 + 5 + 42 + 33 + 1 x 33                1710     21   162
+{i,o,p}    {i,p} outer, nested loop with o inner: 54 + 24 + 40 + 6 + 4 x 6                 1837     24   148
+{i,c,p}    no join predicate, skipped
+{o,c,p}    no join predicate, skipped
+{i,o,c,p}  {i,o,p} outer, nested loop with c inner: 148 + 24 + 7 + 1 + 4 x 1               1047     21   184
+           alternative: {i,o,c} outer, nested loop with p inner: 162 + 21 + 5 + 1 + 4 x 1                193
+
+chosen plan
+project (c.name, p.pname, i.note)            est_rows=1047      est_cost=0
+  nested_loop_join (o.cid = c.cid)           est_rows=1047      est_cost=29
+    project (i.note, o.cid, p.pname)         est_rows=1837      est_cost=0
+      nested_loop_join (i.oid = o.oid)       est_rows=1837      est_cost=54
+        project (i.note, i.oid, p.pname)     est_rows=1837      est_cost=0
+          nested_loop_join (i.pid = p.pid)   est_rows=1837      est_cost=7
+            project (i.note, i.pid, i.oid)   est_rows=3000      est_cost=0
+              rename i                       est_rows=3000      est_cost=0
+                seqscan Item                 est_rows=3000      est_cost=42
+            project (p.pname, p.pid)         est_rows=120       est_cost=0
+              filter (p.category < 3)        est_rows=120       est_cost=0
+                rename p                     est_rows=200       est_cost=0
+                  seqscan Product            est_rows=200       est_cost=5
+        project (o.cid, o.oid)               est_rows=2000      est_cost=0
+          rename o                           est_rows=2000      est_cost=0
+            seqscan Orders                   est_rows=2000      est_cost=40
+    project (c.name, c.cid)                  est_rows=171       est_cost=0
+      filter (c.segment < 3)                 est_rows=171       est_cost=0
+        rename c                             est_rows=300       est_cost=0
+          seqscan Customer                   est_rows=300       est_cost=7

@@ -1,0 +1,4 @@
+predicates,rows passing the first,rows passing the second,estimated rows passing both,actual rows passing both,q-error
+odate > 800 AND shipdate > 800,392,398,77,392,5.1
+city = 'Lima' AND country = 'Peru',9,49,2,9,4.5
+odate < 100 AND shipdate > 900,198,181,19,0,19.0

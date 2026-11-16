@@ -1,0 +1,3 @@
+query,B = 4,B = 8,B = 64
+Q6,hash + nested_loop,nested_loop + nested_loop,nested_loop + nested_loop
+Q12,nested_loop + hash + nested_loop,nested_loop + nested_loop + nested_loop,nested_loop + nested_loop + nested_loop

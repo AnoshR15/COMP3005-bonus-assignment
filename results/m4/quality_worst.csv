@@ -1,0 +1,13 @@
+q-error,query,node,estimated rows,actual rows
+19.9,Q11,sort (Orders.total desc),199,10
+13.5,Q15,"project (a.oid, b.oid)",27,2
+13.5,Q15,nested_loop_join (b.cid = a.cid),27,2
+8.5,Q16,"project (c.name, t.n)",51,6
+8.5,Q16,nested_loop_join (c.cid = t.cid),51,6
+5.1,Q20,"project (o.oid, o.note)",77,392
+5.1,Q20,filter (o.odate > 800 and o.shipdate > 800),77,392
+4.5,Q19,"project (c.name, o.oid)",14,63
+4.5,Q19,"project (c.name, c.cid)",2,9
+4.5,Q19,nested_loop_join (o.cid = c.cid),14,63
+4.5,Q19,filter (c.city = 'Lima' and c.country = 'Peru'),2,9
+4.1,Q18,"project (p.pname, i.price)",16,65

@@ -1,0 +1,16 @@
+before
+  project [c.name, o.oid]
+    select c.cid = o.cid and c.segment = 1 and o.status = 2
+      cross
+        rename c (scan Customer)
+        rename o (scan Orders)
+
+after
+  project [c.name, o.oid]
+    join c.cid = o.cid
+      project [c.name, c.cid]
+        select c.segment = 1
+          rename c (scan Customer)
+      project [o.oid, o.cid]
+        select o.status = 2
+          rename o (scan Orders)

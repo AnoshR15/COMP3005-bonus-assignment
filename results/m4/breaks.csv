@@ -1,0 +1,11 @@
+predicates,B,estimated rows,actual rows,actual / estimated,I/O of the chosen plan,I/O of the informed plan,ratio
+"odate > 500 AND shipdate > 500, three tables",7,494,992,2.0,610,331,1.84
+"odate > 500 AND shipdate > 500, three tables",6,494,992,2.0,616,436,1.41
+"odate > 500 AND shipdate > 500, three tables",8,494,992,2.0,370,315,1.17
+"odate > 500 AND shipdate > 500, four tables",16,494,992,2.0,386,346,1.12
+"odate > 500 AND shipdate > 500, three tables",12,494,992,2.0,246,232,1.06
+"odate > 550 AND shipdate > 550, three tables",12,402,892,2.2,235,223,1.05
+"odate > 500 AND shipdate > 500, three tables",10,494,992,2.0,277,264,1.05
+"odate > 550 AND shipdate > 550, three tables",10,402,892,2.2,265,253,1.05
+"odate > 500 AND shipdate > 500, three tables",16,494,992,2.0,199,199,1.00
+"odate > 550 AND shipdate > 550, three tables",16,402,892,2.2,191,192,0.99

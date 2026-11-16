@@ -1,0 +1,8 @@
+rule,what it does,I/O with all rules,I/O without this rule,ratio,queries whose I/O changed,largest changes,"comparisons, ratio"
+1,split conjunctions,1519,2355,1.55,6,"Q6 +355, Q13 +315, Q14 +137, Q15 +22",3.38
+2,push selects below joins,1519,2476,1.63,10,"Q6 +355, Q13 +315, Q14 +137, Q20 +108",3.35
+3,cross + select = join,1519,1519,1.00,0,-,1.00
+4,"push selects through rename, project, union",1519,1519,1.00,0,-,1.00
+5,push selects below group_by,1519,1519,1.00,0,-,1.00
+6,push projections down,1519,2640,1.74,9,"Q12 +658, Q13 +177, Q14 +149, Q8 +114",0.42
+7,tidy up,1519,1519,1.00,0,-,1.00

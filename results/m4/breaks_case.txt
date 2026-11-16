@@ -1,0 +1,69 @@
+query: SELECT o.oid, o.note, i.note, p.pname FROM Orders o JOIN Item i ON o.oid = i.oid JOIN Product p ON i.pid = p.pid WHERE o.odate > 500 AND o.shipdate > 500
+B = 7
+
+rows passing the two predicates: estimated 494, actual 992
+
+chosen plan, 610 page I/O:
+project (o.oid, o.note, i.note, p.pname)                est_rows=956       est_cost=0
+  nested_loop_join (i.pid = p.pid)                      est_rows=956       est_cost=29
+    project (o.oid, o.note, i.note, i.pid)              est_rows=956       est_cost=0
+      nested_loop_join (i.oid = o.oid)                  est_rows=956       est_cost=64
+        project (i.note, i.pid, i.oid)                  est_rows=3000      est_cost=0
+          rename i                                      est_rows=3000      est_cost=0
+            seqscan Item                                est_rows=3000      est_cost=42
+        project (o.oid, o.note)                         est_rows=494       est_cost=0
+          filter (o.odate > 500 and o.shipdate > 500)   est_rows=494       est_cost=0
+            rename o                                    est_rows=2000      est_cost=0
+              seqscan Orders                            est_rows=2000      est_cost=40
+    project (p.pname, p.pid)                            est_rows=200       est_cost=0
+      rename p                                          est_rows=200       est_cost=0
+        seqscan Product                                 est_rows=200       est_cost=5
+
+plan chosen when told there are 992 rows, 331 page I/O:
+project (o.oid, o.note, i.note, p.pname)            est_rows=1919      est_cost=0
+  nested_loop_join (i.oid = o.oid)                  est_rows=1919      est_cost=111
+    project (i.note, i.oid, p.pname)                est_rows=3000      est_cost=0
+      nested_loop_join (i.pid = p.pid)              est_rows=3000      est_cost=8
+        project (i.note, i.pid, i.oid)              est_rows=3000      est_cost=0
+          rename i                                  est_rows=3000      est_cost=0
+            seqscan Item                            est_rows=3000      est_cost=42
+        project (p.pname, p.pid)                    est_rows=200       est_cost=0
+          rename p                                  est_rows=200       est_cost=0
+            seqscan Product                         est_rows=200       est_cost=5
+    project (o.oid, o.note)                         est_rows=992       est_cost=0
+      filter (o.odate > 500 and o.shipdate > 500)   est_rows=494       est_cost=0
+        rename o                                    est_rows=2000      est_cost=0
+          seqscan Orders                            est_rows=2000      est_cost=40
+
+what the chosen plan did:
+project                        tuples_out=1507     comparisons=0          reads=0       writes=0
+  nested_loop_join             tuples_out=1507     comparisons=301400     reads=12      writes=1
+    project                    tuples_out=1507     comparisons=0          reads=0       writes=0
+      nested_loop_join         tuples_out=1507     comparisons=2976000    reads=495     writes=15
+        project                tuples_out=3000     comparisons=0          reads=0       writes=0
+          rename i             tuples_out=3000     comparisons=0          reads=0       writes=0
+            seqscan Item       tuples_out=3000     comparisons=0          reads=42      writes=0
+        project                tuples_out=992      comparisons=0          reads=0       writes=0
+          filter               tuples_out=992      comparisons=2000       reads=0       writes=0
+            rename o           tuples_out=2000     comparisons=0          reads=0       writes=0
+              seqscan Orders   tuples_out=2000     comparisons=0          reads=40      writes=0
+    project                    tuples_out=200      comparisons=0          reads=0       writes=0
+      rename p                 tuples_out=200      comparisons=0          reads=0       writes=0
+        seqscan Product        tuples_out=200      comparisons=0          reads=5       writes=0
+
+what the informed plan did:
+project                       tuples_out=1507     comparisons=0          reads=0       writes=0
+  nested_loop_join            tuples_out=1507     comparisons=2976000    reads=195     writes=15
+    project                   tuples_out=3000     comparisons=0          reads=0       writes=0
+      nested_loop_join        tuples_out=3000     comparisons=600000     reads=33      writes=1
+        project               tuples_out=3000     comparisons=0          reads=0       writes=0
+          rename i            tuples_out=3000     comparisons=0          reads=0       writes=0
+            seqscan Item      tuples_out=3000     comparisons=0          reads=42      writes=0
+        project               tuples_out=200      comparisons=0          reads=0       writes=0
+          rename p            tuples_out=200      comparisons=0          reads=0       writes=0
+            seqscan Product   tuples_out=200      comparisons=0          reads=5       writes=0
+    project                   tuples_out=992      comparisons=0          reads=0       writes=0
+      filter                  tuples_out=992      comparisons=2000       reads=0       writes=0
+        rename o              tuples_out=2000     comparisons=0          reads=0       writes=0
+          seqscan Orders      tuples_out=2000     comparisons=0          reads=40      writes=0
+
