@@ -1,0 +1,7 @@
+M = N pages,block nested loop,sort-merge,hash,cheapest
+10,20,60,84,block nested loop
+20,60,200,152,block nested loop
+40,160,400,264,block nested loop
+80,560,800,508,hash
+160,2080,1600,988,hash
+240,4560,2400,2992,sort-merge

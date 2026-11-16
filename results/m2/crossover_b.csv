@@ -1,0 +1,17 @@
+B,block nested loop,sort-merge,hash,cheapest
+4,4920,1937,1804,hash
+5,3320,1601,1664,sort-merge
+6,2520,1361,1276,hash
+8,1720,1345,1166,hash
+10,1320,1201,1258,sort-merge
+12,1080,961,900,hash
+16,840,961,628,hash
+24,600,961,642,block nested loop
+32,440,961,658,block nested loop
+48,360,961,690,block nested loop
+64,280,961,724,block nested loop
+96,280,801,772,block nested loop
+122,200,561,798,block nested loop
+128,200,561,800,block nested loop
+192,200,561,972,block nested loop
+256,200,561,1217,block nested loop

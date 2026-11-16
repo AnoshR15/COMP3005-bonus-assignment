@@ -1,0 +1,4 @@
+plan,B,most frames in use at once,rows out,reads,writes,runs,passes
+sort of A80 (20 x B pages),4,4,1520,312,232,20,4
+sort over hash join over nested loop,4,4,380,2473,559,64,5
+distinct (hash) of a sort-merge join,4,4,1140,1386,1266,,

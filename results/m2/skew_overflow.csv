@@ -1,0 +1,4 @@
+level,left pages,right pages,action
+1,27,27,partitioned again
+2,25,25,partitioned again
+3,24,24,nested loop

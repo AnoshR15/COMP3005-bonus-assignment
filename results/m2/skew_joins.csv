@@ -1,0 +1,4 @@
+join,reads,writes,comparisons,rows out,seconds
+block nested loop,360,0,1299600,208620,0.2
+sort-merge,11735,240,228763,208620,0.6
+hash,460,268,209280,208620,1.2

@@ -1,0 +1,7 @@
+keys,B,partitions,table frames,"largest left partition, pages",partitioned again,nested loops,reads,writes,I/O,comparisons,rows out,seconds
+uniform,4,3,3,22,12,1,578,402,980,5468,1140,1.3
+skewed,4,3,3,36,12,1,886,402,1288,228784,208620,1.5
+uniform,16,15,15,6,0,0,256,136,392,2228,1140,0.5
+skewed,16,15,15,27,2,1,460,268,728,209280,208620,1.1
+uniform,64,63,63,2,0,0,288,168,456,2144,1140,1.9
+skewed,64,63,63,25,0,0,296,176,472,209284,208620,2.1

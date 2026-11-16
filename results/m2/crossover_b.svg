@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="440" viewBox="0 0 760 440" font-family="system-ui, sans-serif" font-size="12">
+<title>Page I/O of three joins, M = 120 and N = 80 pages</title>
+<rect width="760" height="440" fill="#fcfcfb"/>
+<text x="78" y="26" font-size="15" fill="#0b0b0b">Page I/O of three joins, M = 120 and N = 80 pages</text>
+<line x1="78.0" y1="46" x2="78.0" y2="378" stroke="#e4e3df"/>
+<text x="78.0" y="396" text-anchor="middle" fill="#52514e">4</text>
+<line x1="105.5" y1="46" x2="105.5" y2="378" stroke="#e4e3df"/>
+<text x="105.5" y="396" text-anchor="middle" fill="#52514e">5</text>
+<line x1="127.9" y1="46" x2="127.9" y2="378" stroke="#e4e3df"/>
+<text x="127.9" y="396" text-anchor="middle" fill="#52514e">6</text>
+<line x1="163.3" y1="46" x2="163.3" y2="378" stroke="#e4e3df"/>
+<text x="163.3" y="396" text-anchor="middle" fill="#52514e">8</text>
+<line x1="190.8" y1="46" x2="190.8" y2="378" stroke="#e4e3df"/>
+<text x="190.8" y="396" text-anchor="middle" fill="#52514e">10</text>
+<line x1="213.3" y1="46" x2="213.3" y2="378" stroke="#e4e3df"/>
+<text x="213.3" y="396" text-anchor="middle" fill="#52514e">12</text>
+<line x1="248.7" y1="46" x2="248.7" y2="378" stroke="#e4e3df"/>
+<text x="248.7" y="396" text-anchor="middle" fill="#52514e">16</text>
+<line x1="298.6" y1="46" x2="298.6" y2="378" stroke="#e4e3df"/>
+<text x="298.6" y="396" text-anchor="middle" fill="#52514e">24</text>
+<line x1="334.0" y1="46" x2="334.0" y2="378" stroke="#e4e3df"/>
+<text x="334.0" y="396" text-anchor="middle" fill="#52514e">32</text>
+<line x1="383.9" y1="46" x2="383.9" y2="378" stroke="#e4e3df"/>
+<text x="383.9" y="396" text-anchor="middle" fill="#52514e">48</text>
+<line x1="419.3" y1="46" x2="419.3" y2="378" stroke="#e4e3df"/>
+<text x="419.3" y="396" text-anchor="middle" fill="#52514e">64</text>
+<line x1="469.3" y1="46" x2="469.3" y2="378" stroke="#e4e3df"/>
+<text x="469.3" y="396" text-anchor="middle" fill="#52514e">96</text>
+<line x1="498.8" y1="46" x2="498.8" y2="378" stroke="#e4e3df"/>
+<text x="498.8" y="396" text-anchor="middle" fill="#52514e">122</text>
+<line x1="504.7" y1="46" x2="504.7" y2="378" stroke="#e4e3df"/>
+<text x="504.7" y="396" text-anchor="middle" fill="#52514e">128</text>
+<line x1="554.6" y1="46" x2="554.6" y2="378" stroke="#e4e3df"/>
+<text x="554.6" y="396" text-anchor="middle" fill="#52514e">192</text>
+<line x1="590.0" y1="46" x2="590.0" y2="378" stroke="#e4e3df"/>
+<text x="590.0" y="396" text-anchor="middle" fill="#52514e">256</text>
+<line x1="78" y1="378.0" x2="590" y2="378.0" stroke="#e4e3df"/>
+<text x="70" y="382.0" text-anchor="end" fill="#52514e">100</text>
+<line x1="78" y1="212.0" x2="590" y2="212.0" stroke="#e4e3df"/>
+<text x="70" y="216.0" text-anchor="end" fill="#52514e">1,000</text>
+<line x1="78" y1="46.0" x2="590" y2="46.0" stroke="#e4e3df"/>
+<text x="70" y="50.0" text-anchor="end" fill="#52514e">10,000</text>
+<rect x="78" y="46" width="512" height="332" fill="none" stroke="#52514e"/>
+<path d="M78.0,97.1 L105.5,125.5 L127.9,145.4 L163.3,172.9 L190.8,192.0 L213.3,206.5 L248.7,224.6 L298.6,248.8 L334.0,271.2 L383.9,285.7 L419.3,303.8 L469.3,303.8 L498.8,328.0 L504.7,328.0 L554.6,328.0 L590.0,328.0" fill="none" stroke="#2a78d6" stroke-width="2"/>
+<circle cx="78.0" cy="97.1" r="3" fill="#2a78d6"/>
+<circle cx="105.5" cy="125.5" r="3" fill="#2a78d6"/>
+<circle cx="127.9" cy="145.4" r="3" fill="#2a78d6"/>
+<circle cx="163.3" cy="172.9" r="3" fill="#2a78d6"/>
+<circle cx="190.8" cy="192.0" r="3" fill="#2a78d6"/>
+<circle cx="213.3" cy="206.5" r="3" fill="#2a78d6"/>
+<circle cx="248.7" cy="224.6" r="3" fill="#2a78d6"/>
+<circle cx="298.6" cy="248.8" r="3" fill="#2a78d6"/>
+<circle cx="334.0" cy="271.2" r="3" fill="#2a78d6"/>
+<circle cx="383.9" cy="285.7" r="3" fill="#2a78d6"/>
+<circle cx="419.3" cy="303.8" r="3" fill="#2a78d6"/>
+<circle cx="469.3" cy="303.8" r="3" fill="#2a78d6"/>
+<circle cx="498.8" cy="328.0" r="3" fill="#2a78d6"/>
+<circle cx="504.7" cy="328.0" r="3" fill="#2a78d6"/>
+<circle cx="554.6" cy="328.0" r="3" fill="#2a78d6"/>
+<circle cx="590.0" cy="328.0" r="3" fill="#2a78d6"/>
+<line x1="606" y1="62" x2="630" y2="62" stroke="#2a78d6" stroke-width="2"/>
+<text x="636" y="66" fill="#0b0b0b">block nested loop</text>
+<path d="M78.0,164.3 L105.5,178.1 L127.9,189.8 L163.3,190.6 L190.8,198.8 L213.3,214.9 L248.7,214.9 L298.6,214.9 L334.0,214.9 L383.9,214.9 L419.3,214.9 L469.3,228.0 L498.8,253.7 L504.7,253.7 L554.6,253.7 L590.0,253.7" fill="none" stroke="#eb6834" stroke-width="2"/>
+<circle cx="78.0" cy="164.3" r="3" fill="#eb6834"/>
+<circle cx="105.5" cy="178.1" r="3" fill="#eb6834"/>
+<circle cx="127.9" cy="189.8" r="3" fill="#eb6834"/>
+<circle cx="163.3" cy="190.6" r="3" fill="#eb6834"/>
+<circle cx="190.8" cy="198.8" r="3" fill="#eb6834"/>
+<circle cx="213.3" cy="214.9" r="3" fill="#eb6834"/>
+<circle cx="248.7" cy="214.9" r="3" fill="#eb6834"/>
+<circle cx="298.6" cy="214.9" r="3" fill="#eb6834"/>
+<circle cx="334.0" cy="214.9" r="3" fill="#eb6834"/>
+<circle cx="383.9" cy="214.9" r="3" fill="#eb6834"/>
+<circle cx="419.3" cy="214.9" r="3" fill="#eb6834"/>
+<circle cx="469.3" cy="228.0" r="3" fill="#eb6834"/>
+<circle cx="498.8" cy="253.7" r="3" fill="#eb6834"/>
+<circle cx="504.7" cy="253.7" r="3" fill="#eb6834"/>
+<circle cx="554.6" cy="253.7" r="3" fill="#eb6834"/>
+<circle cx="590.0" cy="253.7" r="3" fill="#eb6834"/>
+<line x1="606" y1="84" x2="630" y2="84" stroke="#eb6834" stroke-width="2"/>
+<text x="636" y="88" fill="#0b0b0b">sort-merge</text>
+<path d="M78.0,169.5 L105.5,175.3 L127.9,194.4 L163.3,200.9 L190.8,195.5 L213.3,219.6 L248.7,245.5 L298.6,243.9 L334.0,242.2 L383.9,238.8 L419.3,235.3 L469.3,230.7 L498.8,228.3 L504.7,228.1 L554.6,214.0 L590.0,197.8" fill="none" stroke="#1baf7a" stroke-width="2"/>
+<circle cx="78.0" cy="169.5" r="3" fill="#1baf7a"/>
+<circle cx="105.5" cy="175.3" r="3" fill="#1baf7a"/>
+<circle cx="127.9" cy="194.4" r="3" fill="#1baf7a"/>
+<circle cx="163.3" cy="200.9" r="3" fill="#1baf7a"/>
+<circle cx="190.8" cy="195.5" r="3" fill="#1baf7a"/>
+<circle cx="213.3" cy="219.6" r="3" fill="#1baf7a"/>
+<circle cx="248.7" cy="245.5" r="3" fill="#1baf7a"/>
+<circle cx="298.6" cy="243.9" r="3" fill="#1baf7a"/>
+<circle cx="334.0" cy="242.2" r="3" fill="#1baf7a"/>
+<circle cx="383.9" cy="238.8" r="3" fill="#1baf7a"/>
+<circle cx="419.3" cy="235.3" r="3" fill="#1baf7a"/>
+<circle cx="469.3" cy="230.7" r="3" fill="#1baf7a"/>
+<circle cx="498.8" cy="228.3" r="3" fill="#1baf7a"/>
+<circle cx="504.7" cy="228.1" r="3" fill="#1baf7a"/>
+<circle cx="554.6" cy="214.0" r="3" fill="#1baf7a"/>
+<circle cx="590.0" cy="197.8" r="3" fill="#1baf7a"/>
+<line x1="606" y1="106" x2="630" y2="106" stroke="#1baf7a" stroke-width="2"/>
+<text x="636" y="110" fill="#0b0b0b">hash</text>
+<text x="334.0" y="424" text-anchor="middle" fill="#0b0b0b">B, frames (log scale)</text>
+<text x="18" y="212.0" text-anchor="middle" fill="#0b0b0b" transform="rotate(-90 18 212.0)">page reads + writes (log scale)</text>
+</svg>
