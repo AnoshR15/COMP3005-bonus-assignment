@@ -1,0 +1,12 @@
+{
+  "op": "hash_join",
+  "condition": "R.a < S.d",
+  "left": {
+    "op": "seqscan",
+    "table": "R"
+  },
+  "right": {
+    "op": "seqscan",
+    "table": "S"
+  }
+}

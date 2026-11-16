@@ -1,0 +1,13 @@
+{
+  "op": "sort",
+  "keys": [
+    [
+      "Wide.k",
+      "asc"
+    ]
+  ],
+  "child": {
+    "op": "seqscan",
+    "table": "Wide"
+  }
+}

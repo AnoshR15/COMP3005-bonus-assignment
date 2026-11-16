@@ -1,0 +1,25 @@
+{
+  "op": "group_by",
+  "mode": "sort",
+  "keys": [
+    "Emp.did"
+  ],
+  "aggregates": [
+    [
+      "count",
+      "*"
+    ],
+    [
+      "avg",
+      "Emp.salary"
+    ],
+    [
+      "max",
+      "Emp.name"
+    ]
+  ],
+  "child": {
+    "op": "seqscan",
+    "table": "Emp"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "op": "filter",
+  "condition": "R.a = 'abc'",
+  "child": {
+    "op": "seqscan",
+    "table": "R"
+  }
+}

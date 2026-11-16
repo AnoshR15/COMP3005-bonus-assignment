@@ -1,0 +1,12 @@
+{
+  "op": "nested_loop_join",
+  "condition": "DupL.b < DupR.b",
+  "left": {
+    "op": "seqscan",
+    "table": "DupL"
+  },
+  "right": {
+    "op": "seqscan",
+    "table": "DupR"
+  }
+}

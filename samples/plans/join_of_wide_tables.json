@@ -1,0 +1,12 @@
+{
+  "op": "hash_join",
+  "condition": "Wide.k = Wide2.k",
+  "left": {
+    "op": "seqscan",
+    "table": "Wide2"
+  },
+  "right": {
+    "op": "seqscan",
+    "table": "Wide"
+  }
+}

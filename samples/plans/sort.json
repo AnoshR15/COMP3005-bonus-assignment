@@ -1,0 +1,17 @@
+{
+  "op": "sort",
+  "keys": [
+    [
+      "R.c",
+      "asc"
+    ],
+    [
+      "R.a",
+      "desc"
+    ]
+  ],
+  "child": {
+    "op": "seqscan",
+    "table": "R"
+  }
+}

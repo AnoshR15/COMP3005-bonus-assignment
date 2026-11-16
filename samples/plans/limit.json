@@ -1,0 +1,8 @@
+{
+  "op": "limit",
+  "count": 5,
+  "child": {
+    "op": "seqscan",
+    "table": "R"
+  }
+}

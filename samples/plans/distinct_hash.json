@@ -1,0 +1,14 @@
+{
+  "op": "distinct",
+  "mode": "hash",
+  "child": {
+    "op": "project",
+    "columns": [
+      "R.b"
+    ],
+    "child": {
+      "op": "seqscan",
+      "table": "R"
+    }
+  }
+}

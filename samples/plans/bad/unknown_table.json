@@ -1,0 +1,8 @@
+{
+  "op": "filter",
+  "condition": "T.a > 1",
+  "child": {
+    "op": "seqscan",
+    "table": "T"
+  }
+}

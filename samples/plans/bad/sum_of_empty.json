@@ -1,0 +1,19 @@
+{
+  "op": "group_by",
+  "mode": "hash",
+  "keys": [],
+  "aggregates": [
+    [
+      "count",
+      "*"
+    ],
+    [
+      "sum",
+      "Empty.a"
+    ]
+  ],
+  "child": {
+    "op": "seqscan",
+    "table": "Empty"
+  }
+}

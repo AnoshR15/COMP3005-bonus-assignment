@@ -1,0 +1,11 @@
+{
+  "op": "project",
+  "columns": [
+    "R.a",
+    "R.zzz"
+  ],
+  "child": {
+    "op": "seqscan",
+    "table": "R"
+  }
+}
